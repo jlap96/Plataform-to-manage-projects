@@ -29,117 +29,168 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Incio));
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.proyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verProyectosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.asignarProyectoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.conexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comprobarConexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            proyectosToolStripMenuItem = new ToolStripMenuItem();
+            verProyectosToolStripMenuItem = new ToolStripMenuItem();
+            asignarProyectoToolStripMenuItem = new ToolStripMenuItem();
+            modificarEliminarProyectoToolStripMenuItem = new ToolStripMenuItem();
+            conexionToolStripMenuItem = new ToolStripMenuItem();
+            comprobarConexionToolStripMenuItem = new ToolStripMenuItem();
+            importarArchivosToolStripMenuItem1 = new ToolStripMenuItem();
+            importarProyectosToolStripMenuItem = new ToolStripMenuItem();
+            importarArchivosToolStripMenuItem = new ToolStripMenuItem();
+            importarAsignacionesToolStripMenuItem = new ToolStripMenuItem();
+            empleadosToolStripMenuItem = new ToolStripMenuItem();
+            modificarEliminarEmpleadosToolStripMenuItem = new ToolStripMenuItem();
+            label1 = new Label();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.proyectosToolStripMenuItem,
-            this.conexionToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(642, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.BackColor = SystemColors.GradientInactiveCaption;
+            menuStrip1.ImageScalingSize = new Size(20, 20);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { proyectosToolStripMenuItem, conexionToolStripMenuItem, importarArchivosToolStripMenuItem1, empleadosToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new Padding(7, 3, 0, 3);
+            menuStrip1.Size = new Size(734, 30);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // proyectosToolStripMenuItem
             // 
-            this.proyectosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verEmpleadosToolStripMenuItem,
-            this.verProyectosToolStripMenuItem,
-            this.asignarProyectoToolStripMenuItem});
-            this.proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
-            this.proyectosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.proyectosToolStripMenuItem.Text = "Proyectos";
-            // 
-            // verEmpleadosToolStripMenuItem
-            // 
-            this.verEmpleadosToolStripMenuItem.Name = "verEmpleadosToolStripMenuItem";
-            this.verEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.verEmpleadosToolStripMenuItem.Text = "Ver Empleados";
-            this.verEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.verEmpleadosToolStripMenuItem_Click);
+            proyectosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verProyectosToolStripMenuItem, asignarProyectoToolStripMenuItem, modificarEliminarProyectoToolStripMenuItem });
+            proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
+            proyectosToolStripMenuItem.Size = new Size(87, 24);
+            proyectosToolStripMenuItem.Text = "Proyectos";
             // 
             // verProyectosToolStripMenuItem
             // 
-            this.verProyectosToolStripMenuItem.Name = "verProyectosToolStripMenuItem";
-            this.verProyectosToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.verProyectosToolStripMenuItem.Text = "Ver proyectos";
-            this.verProyectosToolStripMenuItem.Click += new System.EventHandler(this.verProyectosToolStripMenuItem_Click);
+            verProyectosToolStripMenuItem.Name = "verProyectosToolStripMenuItem";
+            verProyectosToolStripMenuItem.Size = new Size(285, 26);
+            verProyectosToolStripMenuItem.Text = "Ver proyectos";
+            verProyectosToolStripMenuItem.Click += verProyectosToolStripMenuItem_Click;
             // 
             // asignarProyectoToolStripMenuItem
             // 
-            this.asignarProyectoToolStripMenuItem.Name = "asignarProyectoToolStripMenuItem";
-            this.asignarProyectoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.asignarProyectoToolStripMenuItem.Text = "Asignar proyecto";
-            this.asignarProyectoToolStripMenuItem.Click += new System.EventHandler(this.asignarProyectoToolStripMenuItem_Click);
+            asignarProyectoToolStripMenuItem.Name = "asignarProyectoToolStripMenuItem";
+            asignarProyectoToolStripMenuItem.Size = new Size(285, 26);
+            asignarProyectoToolStripMenuItem.Text = "Asignar proyecto";
+            asignarProyectoToolStripMenuItem.Click += asignarProyectoToolStripMenuItem_Click;
+            // 
+            // modificarEliminarProyectoToolStripMenuItem
+            // 
+            modificarEliminarProyectoToolStripMenuItem.Name = "modificarEliminarProyectoToolStripMenuItem";
+            modificarEliminarProyectoToolStripMenuItem.Size = new Size(285, 26);
+            modificarEliminarProyectoToolStripMenuItem.Text = "Modificar/Eliminar proyectos";
+            modificarEliminarProyectoToolStripMenuItem.Click += modificarEliminarProyectoToolStripMenuItem_Click;
             // 
             // conexionToolStripMenuItem
             // 
-            this.conexionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.comprobarConexionToolStripMenuItem});
-            this.conexionToolStripMenuItem.Name = "conexionToolStripMenuItem";
-            this.conexionToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.conexionToolStripMenuItem.Text = "Conexion";
+            conexionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { comprobarConexionToolStripMenuItem });
+            conexionToolStripMenuItem.Name = "conexionToolStripMenuItem";
+            conexionToolStripMenuItem.Size = new Size(85, 24);
+            conexionToolStripMenuItem.Text = "Conexion";
             // 
             // comprobarConexionToolStripMenuItem
             // 
-            this.comprobarConexionToolStripMenuItem.Name = "comprobarConexionToolStripMenuItem";
-            this.comprobarConexionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.comprobarConexionToolStripMenuItem.Text = "Comprobar conexion";
-            this.comprobarConexionToolStripMenuItem.Click += new System.EventHandler(this.comprobarConexionToolStripMenuItem_Click);
+            comprobarConexionToolStripMenuItem.Name = "comprobarConexionToolStripMenuItem";
+            comprobarConexionToolStripMenuItem.Size = new Size(232, 26);
+            comprobarConexionToolStripMenuItem.Text = "Comprobar conexion";
+            comprobarConexionToolStripMenuItem.Click += comprobarConexionToolStripMenuItem_Click;
+            // 
+            // importarArchivosToolStripMenuItem1
+            // 
+            importarArchivosToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { importarProyectosToolStripMenuItem, importarArchivosToolStripMenuItem, importarAsignacionesToolStripMenuItem });
+            importarArchivosToolStripMenuItem1.Name = "importarArchivosToolStripMenuItem1";
+            importarArchivosToolStripMenuItem1.Size = new Size(139, 24);
+            importarArchivosToolStripMenuItem1.Text = "Importar archivos";
+            // 
+            // importarProyectosToolStripMenuItem
+            // 
+            importarProyectosToolStripMenuItem.Name = "importarProyectosToolStripMenuItem";
+            importarProyectosToolStripMenuItem.Size = new Size(239, 26);
+            importarProyectosToolStripMenuItem.Text = "Importar proyectos";
+            importarProyectosToolStripMenuItem.Click += importarProyectosToolStripMenuItem_Click;
+            // 
+            // importarArchivosToolStripMenuItem
+            // 
+            importarArchivosToolStripMenuItem.Name = "importarArchivosToolStripMenuItem";
+            importarArchivosToolStripMenuItem.Size = new Size(239, 26);
+            importarArchivosToolStripMenuItem.Text = "Importar empleados";
+            importarArchivosToolStripMenuItem.Click += importarArchivosToolStripMenuItem_Click_1;
+            // 
+            // importarAsignacionesToolStripMenuItem
+            // 
+            importarAsignacionesToolStripMenuItem.Name = "importarAsignacionesToolStripMenuItem";
+            importarAsignacionesToolStripMenuItem.Size = new Size(239, 26);
+            importarAsignacionesToolStripMenuItem.Text = "Importar asignaciones";
+            importarAsignacionesToolStripMenuItem.Click += importarAsignacionesToolStripMenuItem_Click;
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            empleadosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { modificarEliminarEmpleadosToolStripMenuItem });
+            empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            empleadosToolStripMenuItem.Size = new Size(97, 24);
+            empleadosToolStripMenuItem.Text = "Empleados";
+            // 
+            // modificarEliminarEmpleadosToolStripMenuItem
+            // 
+            modificarEliminarEmpleadosToolStripMenuItem.Name = "modificarEliminarEmpleadosToolStripMenuItem";
+            modificarEliminarEmpleadosToolStripMenuItem.Size = new Size(294, 26);
+            modificarEliminarEmpleadosToolStripMenuItem.Text = "Modificar/Eliminar empleados";
+            modificarEliminarEmpleadosToolStripMenuItem.Click += modificarEliminarEmpleadosToolStripMenuItem_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Britannic Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(247, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 32);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BIENVENIDO";
+            label1.AutoSize = true;
+            label1.Font = new Font("Britannic Bold", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(282, 111);
+            label1.Name = "label1";
+            label1.Size = new Size(215, 41);
+            label1.TabIndex = 1;
+            label1.Text = "BIENVENIDO";
             // 
             // Incio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(642, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.menuStrip1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Incio";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Incio";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(734, 600);
+            Controls.Add(label1);
+            Controls.Add(menuStrip1);
+            Cursor = Cursors.Hand;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Incio";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Incio";
+            Load += Incio_Load;
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem proyectosToolStripMenuItem;
-        private ToolStripMenuItem verEmpleadosToolStripMenuItem;
         private ToolStripMenuItem verProyectosToolStripMenuItem;
         private ToolStripMenuItem asignarProyectoToolStripMenuItem;
         private ToolStripMenuItem conexionToolStripMenuItem;
         private ToolStripMenuItem comprobarConexionToolStripMenuItem;
         private Label label1;
+        private ToolStripMenuItem importarArchivosToolStripMenuItem1;
+        private ToolStripMenuItem importarProyectosToolStripMenuItem;
+        private ToolStripMenuItem importarAsignacionesToolStripMenuItem;
+        private ToolStripMenuItem empleadosToolStripMenuItem;
+        private ToolStripMenuItem importarArchivosToolStripMenuItem;
+        private ToolStripMenuItem modificarEliminarEmpleadosToolStripMenuItem;
+        private ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
     }
 }

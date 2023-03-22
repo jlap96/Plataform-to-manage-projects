@@ -28,47 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.mostrarProy = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            dataGridView1 = new DataGridView();
+            mostrarProy = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(35, 131);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(603, 292);
-            this.dataGridView1.TabIndex = 0;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(40, 175);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(689, 389);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // mostrarProy
             // 
-            this.mostrarProy.AutoEllipsis = true;
-            this.mostrarProy.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.mostrarProy.Location = new System.Drawing.Point(295, 65);
-            this.mostrarProy.Name = "mostrarProy";
-            this.mostrarProy.Size = new System.Drawing.Size(91, 30);
-            this.mostrarProy.TabIndex = 1;
-            this.mostrarProy.Text = "MOSTRAR";
-            this.mostrarProy.UseVisualStyleBackColor = true;
-            this.mostrarProy.Click += new System.EventHandler(this.mostrarProy_Click);
+            mostrarProy.AutoEllipsis = true;
+            mostrarProy.ForeColor = SystemColors.Desktop;
+            mostrarProy.Location = new Point(337, 87);
+            mostrarProy.Margin = new Padding(3, 4, 3, 4);
+            mostrarProy.Name = "mostrarProy";
+            mostrarProy.Size = new Size(104, 40);
+            mostrarProy.TabIndex = 1;
+            mostrarProy.Text = "MOSTRAR";
+            mostrarProy.UseVisualStyleBackColor = true;
+            mostrarProy.Click += mostrarProy_Click;
             // 
             // MostrarProyectos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(663, 450);
-            this.Controls.Add(this.mostrarProy);
-            this.Controls.Add(this.dataGridView1);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Name = "MostrarProyectos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MostrarProyectos";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
+            ClientSize = new Size(758, 600);
+            Controls.Add(mostrarProy);
+            Controls.Add(dataGridView1);
+            Cursor = Cursors.Hand;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "MostrarProyectos";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "MostrarProyectos";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

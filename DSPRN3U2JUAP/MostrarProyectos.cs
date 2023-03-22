@@ -38,11 +38,16 @@ namespace DSPRN3U2JUAP
                 //Cerramos la conexion 
                 conexion.ObtenerConexion().Close();
             }
-            catch 
+            catch
             {
                 //Agregamos mensaje de error
                 MessageBox.Show("Error al mostrar datos", "Estado de conexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
