@@ -28,7 +28,7 @@ namespace DSPRN3U2JUAP
             conexion.ObtenerConexion();
             try
             {
-                string actualizar = "UPDATE proyectos SET Nombre=@nombre, FechaInicio=@FechaIn, FechaFin=@FechaFin, Estatus=@estatus where FolioProy=@id";
+                string actualizar = "UPDATE proyectos SET Nombre=@nombre, FechaInicio=@FechaIn, FechaFin=@FechaFin, Estatus=@estatus, FechaFinReal=@fin where FolioProy=@id";
                 MySqlCommand update = new MySqlCommand(actualizar, conexion.ObtenerConexion());
 
                 update.Parameters.AddWithValue("@id", textId.Text);
@@ -36,6 +36,7 @@ namespace DSPRN3U2JUAP
                 update.Parameters.AddWithValue("@FechaIn", textFechaInicio.Text);
                 update.Parameters.AddWithValue("@FechaFin", textFechaFin.Text);
                 update.Parameters.AddWithValue("@estatus", textEstatus.Text);
+                update.Parameters.AddWithValue("@fin", maskedFechaFinReal.Text);
 
 
                 update.ExecuteNonQuery();
@@ -73,7 +74,7 @@ namespace DSPRN3U2JUAP
             try
             {
                 //Realizamos consulta a BD para obtener los datos de la tabla proyectos
-                MySqlCommand com = new MySqlCommand("select FolioProy, Nombre, FechaInicio, FechaFin, Estatus, departamento_iddepartamento from proyectos order by FolioProy asc", conexion.ObtenerConexion());
+                MySqlCommand com = new MySqlCommand("select FolioProy, Nombre, FechaInicio, FechaFin, Estatus, departamento_iddepartamento, FechaFinReal from proyectos order by FolioProy asc", conexion.ObtenerConexion());
                 MySqlDataAdapter da = new MySqlDataAdapter(com);
                 DataTable tabla = new DataTable();
                 da.Fill(tabla);
@@ -86,6 +87,7 @@ namespace DSPRN3U2JUAP
                 dataGridView1.Columns["FechaFin"].HeaderText = "FECHA FIN";
                 dataGridView1.Columns["Estatus"].HeaderText = "ESTATUS";
                 dataGridView1.Columns["departamento_iddepartamento"].HeaderText = "DEPARTAMENTO";
+                dataGridView1.Columns["FechaFinReal"].HeaderText = "FECHA FIN REAL";
                 dataGridView1.AllowUserToAddRows = false;
                 //Cerramos la conexion 
                 conexion.ObtenerConexion().Close();
@@ -140,6 +142,7 @@ namespace DSPRN3U2JUAP
                 textFechaFin.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
                 textEstatus.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 textDepartamento.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                maskedFechaFinReal.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             }
             catch
             {

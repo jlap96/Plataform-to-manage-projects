@@ -75,5 +75,11 @@ namespace DSPRN3U2JUAP
             ModificarProyectos venmodificarProyectos = new ModificarProyectos();
             venmodificarProyectos.ShowDialog();
         }
+
+        private void verProyectosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            verProyectos venVerProyectos = new verProyectos();
+            venVerProyectos .ShowDialog();
+        }
     }
 }

@@ -43,6 +43,7 @@
             empleadosToolStripMenuItem = new ToolStripMenuItem();
             modificarEliminarEmpleadosToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
+            verProyectosToolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             // proyectosToolStripMenuItem
             // 
-            proyectosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verProyectosToolStripMenuItem, asignarProyectoToolStripMenuItem, modificarEliminarProyectoToolStripMenuItem });
+            proyectosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { verProyectosToolStripMenuItem, asignarProyectoToolStripMenuItem, modificarEliminarProyectoToolStripMenuItem, verProyectosToolStripMenuItem1 });
             proyectosToolStripMenuItem.Name = "proyectosToolStripMenuItem";
             proyectosToolStripMenuItem.Size = new Size(87, 24);
             proyectosToolStripMenuItem.Text = "Proyectos";
@@ -69,7 +70,7 @@
             // 
             verProyectosToolStripMenuItem.Name = "verProyectosToolStripMenuItem";
             verProyectosToolStripMenuItem.Size = new Size(285, 26);
-            verProyectosToolStripMenuItem.Text = "Ver proyectos";
+            verProyectosToolStripMenuItem.Text = "Ver asignaciones";
             verProyectosToolStripMenuItem.Click += verProyectosToolStripMenuItem_Click;
             // 
             // asignarProyectoToolStripMenuItem
@@ -152,6 +153,13 @@
             label1.TabIndex = 1;
             label1.Text = "BIENVENIDO";
             // 
+            // verProyectosToolStripMenuItem1
+            // 
+            verProyectosToolStripMenuItem1.Name = "verProyectosToolStripMenuItem1";
+            verProyectosToolStripMenuItem1.Size = new Size(285, 26);
+            verProyectosToolStripMenuItem1.Text = "Ver proyectos";
+            verProyectosToolStripMenuItem1.Click += verProyectosToolStripMenuItem1_Click;
+            // 
             // Incio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -192,5 +200,6 @@
         private ToolStripMenuItem importarArchivosToolStripMenuItem;
         private ToolStripMenuItem modificarEliminarEmpleadosToolStripMenuItem;
         private ToolStripMenuItem modificarEliminarProyectoToolStripMenuItem;
+        private ToolStripMenuItem verProyectosToolStripMenuItem1;
     }
 }

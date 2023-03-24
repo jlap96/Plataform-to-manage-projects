@@ -43,12 +43,14 @@
             label2 = new Label();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            label7 = new Label();
+            maskedFechaFinReal = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // textDepartamento
             // 
-            textDepartamento.Location = new Point(262, 538);
+            textDepartamento.Location = new Point(262, 592);
             textDepartamento.Name = "textDepartamento";
             textDepartamento.Size = new Size(208, 27);
             textDepartamento.TabIndex = 29;
@@ -56,7 +58,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(76, 545);
+            label6.Location = new Point(76, 599);
             label6.Name = "label6";
             label6.Size = new Size(106, 20);
             label6.TabIndex = 28;
@@ -64,7 +66,7 @@
             // 
             // textEstatus
             // 
-            textEstatus.Location = new Point(262, 490);
+            textEstatus.Location = new Point(262, 538);
             textEstatus.Name = "textEstatus";
             textEstatus.Size = new Size(208, 27);
             textEstatus.TabIndex = 27;
@@ -100,7 +102,7 @@
             // button2
             // 
             button2.Cursor = Cursors.Hand;
-            button2.Location = new Point(763, 513);
+            button2.Location = new Point(886, 567);
             button2.Name = "button2";
             button2.Size = new Size(117, 52);
             button2.TabIndex = 22;
@@ -112,7 +114,7 @@
             // 
             button1.Cursor = Cursors.Hand;
             button1.ForeColor = SystemColors.ActiveCaptionText;
-            button1.Location = new Point(763, 313);
+            button1.Location = new Point(886, 313);
             button1.Name = "button1";
             button1.Size = new Size(117, 57);
             button1.TabIndex = 21;
@@ -123,7 +125,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(76, 497);
+            label5.Location = new Point(76, 545);
             label5.Name = "label5";
             label5.Size = new Size(55, 20);
             label5.TabIndex = 20;
@@ -173,16 +175,36 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(804, 277);
+            dataGridView1.Size = new Size(927, 277);
             dataGridView1.TabIndex = 15;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(76, 494);
+            label7.Name = "label7";
+            label7.Size = new Size(97, 20);
+            label7.TabIndex = 30;
+            label7.Text = "Fecha fin real";
+            // 
+            // maskedFechaFinReal
+            // 
+            maskedFechaFinReal.Location = new Point(262, 491);
+            maskedFechaFinReal.Mask = "0000/00/00";
+            maskedFechaFinReal.Name = "maskedFechaFinReal";
+            maskedFechaFinReal.Size = new Size(208, 27);
+            maskedFechaFinReal.TabIndex = 32;
+            maskedFechaFinReal.ValidatingType = typeof(DateTime);
             // 
             // ModificarProyectos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(943, 585);
+            ClientSize = new Size(1097, 702);
+            Controls.Add(maskedFechaFinReal);
+            Controls.Add(label7);
             Controls.Add(textDepartamento);
             Controls.Add(label6);
             Controls.Add(textEstatus);
@@ -224,5 +246,7 @@
         private Label label2;
         private Label label1;
         private DataGridView dataGridView1;
+        private Label label7;
+        private MaskedTextBox maskedFechaFinReal;
     }
 }
